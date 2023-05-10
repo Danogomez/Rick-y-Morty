@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Validation from "../Validation/Validation";
+import style from './Forms.module.css'
 
 
 const Forms =({login}) => {
@@ -24,7 +25,7 @@ const handleSubmit = (event) => {
 
   return (
         <div>
-            <form>
+            <form className={style.container}>
                 <label htmlFor="email">Email: </label>
                 <input               
                 onChange={handleChange} 
