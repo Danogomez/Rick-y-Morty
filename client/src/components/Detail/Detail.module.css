@@ -1,0 +1,37 @@
+.container{
+    margin-inline: center ;
+    margin: top 30px;;
+    align-content: center;
+    background-color: rgba(246, 190, 190, 0.872);
+    display: inline-table;
+    border: 3px black solid;
+    align-items: center;
+}
+.parent {
+  display: grid;
+  place-items: center;
+}
+
+.person {
+    display:contents;
+    display: center;
+    font-family: Arial, sans-serif;
+    margin: center;
+    padding: center;
+  }
+  
+  .header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .header h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+    
+.img {
+    border-radius: 103px 103px 103px 103px;
+}
