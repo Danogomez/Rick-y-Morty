@@ -18,6 +18,7 @@ const Forms =({login}) => {
     }
 
 const handleSubmit = (event) => {
+    
     event.preventDefault()
     login(userData)
 };
@@ -25,7 +26,7 @@ const handleSubmit = (event) => {
 
   return (
         <div>
-            <form className={style.container}>
+            <form onSubmit={handleSubmit} className={style.container}>
                 <label htmlFor="email">Email: </label>
                 <input               
                 onChange={handleChange} 
@@ -49,7 +50,7 @@ const handleSubmit = (event) => {
                     errors.p1 ? (<p>{errors.p1}</p>) : (<p>{errors.p2}</p>)
                 }
                 <br />
-                <button onClick={handleSubmit} type="submit">SUBMIT</button>
+                <button type="submit">SUBMIT</button>
             </form>
         </div>
     );

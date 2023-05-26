@@ -1,13 +1,7 @@
-const http = require("http")
-const {getCharById} = require('./controllers/getCharById');
+const express = require('express');
+const server = express();
 
-http.createServer((req,res)=>{
-    res.setHeader('Access-Control-Allow-Origin', '*');
-
-    if(req.url.includes("/rickandmorty/character")){
-        const id = req.url.split('/').at(-1)
-
-        getCharById(res, Number(id));   
-   }
-
-}).listen(3001,"127.0.0.1")
+const PORT = 3001
+server.listen(3001, () => {
+   console.log('Listening on port: ' + PORT);
+});
