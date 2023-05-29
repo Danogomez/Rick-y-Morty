@@ -10,6 +10,7 @@ import { useState, useEffect } from 'react';
    const [isFav, setIsFav] = useState(false);
 
    const handleFavorite = () => {
+
       if(isFav) {
          setIsFav(false);
          removeFav(id);
@@ -33,7 +34,6 @@ import { useState, useEffect } from 'react';
       
          
          <button onClick={handleFavorite}>{isFav ? '❤️' : '🤍'}</button>
-                
          <img src={image} alt='' /> 
          <div className= {style.datos}>
          <Link to={`/detail/${id}`}>
@@ -71,4 +71,4 @@ const mapDispatchToProps = (dispatch) => {
 export default connect(
    mapStateToProps,
    mapDispatchToProps,
-)(Card)
+)(Card);
