@@ -4,6 +4,7 @@ const cors = require('cors');
 const morgan = require('morgan');
 const router = require('./routes/index');
 
+
 server.use(express.json());
 server.use(morgan('dev'));
 server.use(cors());
@@ -24,8 +25,11 @@ server.use((req, res, next) => {
 
 server.use('/rickandmorty', router);
 
+const {conn} = require('./DB_connection')
 
 const PORT = 3001
-server.listen(3001, () => {
-   console.log('Listening on port: ' + PORT);
+server.listen(3001, async () => {
+   console.log('Listening on port: ' + PORT),
+   await conn.sync({force: false})
+   console.log("entre a la DB")
 });
